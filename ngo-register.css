@@ -1,0 +1,79 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #FF6B6B, #FFD93D);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container for the registration card */
+  .container {
+    background-color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    width: 380px;
+    text-align: center;
+  }
+  
+  /* Header */
+  h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.6rem;
+  }
+  
+  /* Form input fields */
+  form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: 0.2s ease-in-out;
+    outline: none;
+  }
+  
+  form input:focus {
+    border-color: #FF6B6B;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  }
+  
+  /* Submit button */
+  form button {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #e55757;
+  }
+  
+  /* Switch link below form */
+  .switch-link {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+  }
+  
+  .switch-link a {
+    color: #FF6B6B;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .switch-link a:hover {
+    text-decoration: underline;
+  }

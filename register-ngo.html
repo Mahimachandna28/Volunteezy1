@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register as NGO - Volunteezy</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #FF6B6B, #FFD93D);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+      width: 380px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+      font-size: 1.6rem;
+    }
+
+    form input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      transition: 0.2s ease-in-out;
+      outline: none;
+    }
+
+    form input:focus {
+      border-color: #FF6B6B;
+      box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+    }
+
+    form button {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      background-color: #FF6B6B;
+      color: white;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #e55757;
+    }
+
+    .switch-link {
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .switch-link a {
+      color: #FF6B6B;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .switch-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register as an NGO</h2>
+    <form action="#" method="POST">
+      <input type="text" name="ngo-name" placeholder="NGO Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="registration-number" placeholder="Registration Number" required />
+      <input type="text" name="location" placeholder="Location/City" required />
+      <input type="password" name="password" placeholder="Create Password" required />
+      <input type="password" name="confirm-password" placeholder="Confirm Password" required />
+      <button type="submit">Register NGO</button>
+    </form>
+    <p class="switch-link">
+      Already registered? <a href="login.html">Login here</a>
+    </p>
+  </div>
+</body>
+</html>

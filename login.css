@@ -1,0 +1,69 @@
+/* login.css */
+
+body.auth-body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #FF6B6B, #FFD93D);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .auth-container {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .auth-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s ease-in-out;
+  }
+  
+  form input:focus {
+    border-color: #FF6B6B;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+  }
+  
+  .btn-primary {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e55757;
+  }
+  
+  .auth-container p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .auth-container a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: 500;
+  }

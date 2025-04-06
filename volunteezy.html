@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteezy - Connect Volunteers with NGOs</title>
+  <link rel="stylesheet" href="mainpage.css">
+  <style>
+    .opportunities-section {
+      background: linear-gradient(to bottom, #5C6BC0, #3F51B5);
+      color: white;
+      padding: 60px 20px;
+    }
+  
+    .opportunities-section section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .opportunities-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  
+    .opportunities-section .subtitle {
+      font-size: 1.1rem;
+      color: #dcdfff;
+      margin-bottom: 40px;
+    }
+  
+    .search-container {
+      background-color: rgba(16, 23, 75, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+  
+    .search-container input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      background-color: #0b0c2a;
+      color: white;
+    }
+  
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+  
+    .filters select {
+      flex: 1 1 calc(25% - 15px);
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #0b0c2a;
+      color: orange;
+      appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px 16px;
+    }
+  
+    button {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 6px;
+         font-weight: bold;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: darkorange;
+    }
+
+  
+    @media (max-width: 768px) {
+      .filters {
+        flex-direction: column;
+      }
+  
+      .filters select {
+        flex: 1 1 100%;
+      }
+  
+      .apply-button {
+        width: 100%;
+        float: none;
+      }
+    }
+  </style>
+  
+  <style>
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <span>Volunteezy</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#testimonials">Success Stories</a></li>
+        </ul>
+        <div id="auth-buttons">
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+
+          <button class="btn btn-danger" id="logout-btn" style="display: none;">Log Out</button>
+        </div> 
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>Connect. Volunteer. Impact.</h1>
+        <p>Join Volunteezy to find verified NGOs in your area and make a real difference. Whether you're skilled in teaching, healthcare, or environment protection, we'll match you with opportunities that matter.</p>
+        <div class="hero-buttons">
+          <a href="signup.html" class="btn btn-secondary">I Want to Volunteer</a>
+          <a href="register-ngo.html" class="btn btn-outline">Register as an NGO</a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Why Choose Volunteezy?</h2>
+        <p>Our platform makes it easy to find legitimate volunteering opportunities and connect with verified NGOs that need your skills.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">✓</div>
+          <h3>Verified NGOs</h3>
+          <p>All NGOs undergo a thorough verification process to ensure legitimacy before they can post opportunities.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🔍</div>
+          <h3>Smart Search</h3>
+          <p>Our Advanced filters suggest the perfect NGOs based on your skills, interests, and location preferences.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🏆</div>
+          <h3>Impact Tracking</h3>
+          <p>Track your volunteering hours, impact metrics, and earn recognition on our community leaderboard.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">⭐</div>
+          <h3>Reviews & Feedback</h3>
+          <p>Rate NGOs based on your experience and read reviews from other volunteers before committing.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">📱</div>
+          <h3>Detailed NGO profiles</h3>
+          <p>Custom profile pages showcases their mission, goals, current volunteering needs, location, photos and area of operation.</p>
+          
+        </div>
+        <div class="feature-card fade-in">
+            <div class="feature-icon">📖</div>
+            <h3>Volunteer Stories & Testimonials </h3>
+            <p>Volunteers can share their stories after each opportunity such as uploading photos etc. </p>
+            
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>How It Works</h2>
+        <p>Getting started with Volunteezy is simple and straightforward. Follow these steps to begin your volunteering journey.</p>
+      </div>
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step-number">1</div>
+          <h3>Create Your Profile</h3>
+          <p>Sign up and fill in your skills, interests, availability, and preferred location for volunteering.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">2</div>
+          <h3>Discover NGOs</h3>
+          <p>Browse verified NGOs based on your preferred location, skills and commitment level.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">3</div>
+          <h3>Apply & Connect</h3>
+          <p>Apply for opportunities that match your interests and connect with NGOs directly through our platform.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">4</div>
+          <h3>Make an Impact</h3>
+          <p>Volunteer in person, track your hours, and share your experiences with the Volunteezy community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Volunteering Categories</h2>
+        <p>Explore different areas where you can make an impact based on your skills and interests.</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card fade-in">
+          <div class="category-img">📚</div>
+          <div class="category-content">
+            <h3>Education</h3>
+            <p>Teach children, conduct workshops, or help with after-school programs.</p>
+            <a href="#" class="btn btn-secondary">Explore</a>
+          </div>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img">🍎</div>
+          <div class="category-content">
+            <h3>Food Distribution</h3>
+            <p>Help with food drives, meal preparation, or distribution to those in need.</p>
+            <a href="#" class="btn btn-secondary">Explore</a>
+          </div>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img">⚕</div>
+          <div class="category-content">
+            <h3>Healthcare</h3>
+            <p>Assist in health camps, awareness programs, or administrative support.</p>
+            <a href="#" class="btn btn-secondary">Explore</a>
+          </div>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img">🌱</div>
+          <div class="category-content">
+            <h3>Environment</h3>
+            <p>Participate in clean-ups, tree plantations, or conservation efforts.</p>
+            <a href="#" class="btn btn-secondary">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Featured Opportunities Section -->
+<section class="opportunities-section" id="opportunities">
+    <section>
+      <p style="color: #c5cae9; text-transform: uppercase; font-weight: 500; letter-spacing: 1px; margin-bottom: 10px;">Opportunities</p>
+      <h2>Featured volunteering opportunities</h2>
+      <p class="subtitle">Join these impactful initiatives and start making a difference today.</p>
+  
+      <div class="search-container">
+        <input type="text" placeholder="Search opportunities by keyword or location" />
+  
+        <div class="filters">
+          <select name="category">
+            <option value="all">All Categories</option>
+            <option value="education">Education</option>
+            <option value="health">Health</option>
+            <option value="environment">Environment</option>
+          </select>
+  
+          <select name="location">
+            <option value="all">All Locations</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="kolkata">Kolkata</option>
+          </select>
+  
+          <select name="schedule">
+            <option value="any">Any Schedule</option>
+            <option value="weekdays">Weekdays</option>
+            <option value="weekends">Weekends</option>
+          </select>
+  
+          <select name="duration">
+            <option value="any">Any Duration</option>
+            <option value="short">Short Term</option>
+            <option value="long">Long Term</option>
+          </select>
+        </div>
+  
+        <button class="btn-filter">Apply Filters</button>
+      </div>
+    </section>
+  </section>
+  
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Success Stories</h2>
+        <p>Hear from volunteers who found meaningful opportunities through Volunteezy.</p>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testimonial fade-in">
+          <div class="testimonial-content">
+            "Through Volunteezy, I found an education NGO just 2 miles from my home. I've been teaching English to underprivileged children for 6 months now, and it's been the most fulfilling experience."
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-author-img"></div>
+            <div class="testimonial-author-info">
+              <h4>Priya Sharma</h4>
+              <p>English Teacher | Volunteer since 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-in">
+          <div class="testimonial-content">
+            "As a small NGO, we struggled to find reliable volunteers. Volunteezy's verification process gave us credibility, and we've connected with over 50 dedicated volunteers in just 3 months!"
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-author-img"></div>
+            <div class="testimonial-author-info">
+              <h4>Rahul Mehra</h4>
+              <p>Founder, GreenEarth Foundation</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-in">
+          <div class="testimonial-content">
+            "The idea is brilliant! It suggested an environmental NGO that perfectly matched my weekend availability and passion for conservation. I've been volunteering there every Saturday."
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-author-img"></div>
+            <div class="testimonial-author-info">
+              <h4>Amit Patel</h4>
+              <p>Software Engineer | Weekend Volunteer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <h3>500+</h3>
+          <p>Verified NGOs</p>
+        </div>
+        <div class="stat-item fade-in">
+          <h3>10,000+</h3>
+          <p>Active Volunteers</p>
+        </div>
+        <div class="stat-item fade-in">
+          <h3>25,000+</h3>
+          <p>Hours Volunteered</p>
+        </div>
+        <div class="stat-item fade-in">
+          <h3>100+</h3>
+          <p>Cities Covered</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="fade-in">Ready to Make a Difference?</h2>
+      <p class="fade-in">Join thousands of volunteers who are creating positive change in their communities through Volunteezy.</p>
+      <a href="signup.html" class="btn btn-primary fade-in">Get Started Today</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Volunteezy</h3>
+          <p>Connecting passionate volunteers with verified NGOs to create lasting positive impact in communities.</p>
+          <div class="social-links">
+            <a href="#">F</a>
+            <a href="#">T</a>
+            <a href="#">I</a>
+            <a href="#">L</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="volunteezy.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Find NGOs</a></li>
+            <li><a href="#">Register as NGO</a></li>
+            <li><a href="#">Success Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Environment</a></li>
+            <li><a href="#">Food Distribution</a></li>
+            <li><a href="#">Skill Development</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li>
+            </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script src="script.js"></script> <!-- Add this line here -->
+</body>
+</html>
